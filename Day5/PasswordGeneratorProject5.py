@@ -18,7 +18,7 @@ for i in range(0,nr_symbols):
 for i in range(0,nr_numbers):
     # 2nd method to select random number from list 
     str=str + random.choice(numbers)
-print(str)
+# print(str)
 
 
 #Eazy Level - Order not randomised:
@@ -31,7 +31,6 @@ print(str)
 # passlist=list(str.strip(""))
 # Covert string to a list ----------------IIIIIIIMMMMMMMPPPPPPPPPPPTTTTTTTTTTT
 passlist=list(str)
-# print(passlist)
 
 # // or we can use the method above to shuffle-------------------IIIIIIIMMMMMMMPPPPPPPPPPPTTTTTTTTTTT
 random.shuffle(passlist)

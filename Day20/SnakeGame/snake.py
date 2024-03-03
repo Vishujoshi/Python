@@ -1,0 +1,68 @@
+import turtle
+
+from turtle import Turtle
+import time
+positions=[(0,0),(-20,0),(-40,0)]
+UP=90
+DOWN=270
+LEFT=180
+RIGHT=0
+class Snake:
+     
+
+    def __init__(self) :
+       
+        self.tutle_list=[]
+        self.make_snake()
+        self.head=self.tutle_list[0]
+
+
+    
+                
+
+    def make_snake(self):
+        
+        for i in positions:
+            
+            new_turtle=Turtle()
+            new_turtle.penup()
+            new_turtle.shape("square")
+            new_turtle.color("white")
+            new_turtle.goto(i)
+            self.tutle_list.append(new_turtle)
+    
+    # move()
+
+    # myscreen.onkey(key="space",fun=move)
+    def move(self):
+        for i in range(len(positions)-1,0,-1):
+            new_x=self.tutle_list[i-1].xcor()
+            new_y=self.tutle_list[i-1].ycor()
+            self.tutle_list[i].goto(new_x,new_y)
+        self.head.forward(20)
+        
+    def move_left(self):
+        if self.head.heading()!=RIGHT:
+            self.head.setheading(LEFT)
+
+    def move_right(self):
+        if self.head.heading()!=LEFT:
+            self.head.setheading(RIGHT)
+
+    def move_up(self):
+        if self.head.heading()!=DOWN:
+            self.head.setheading(UP)
+
+
+    def move_down(self):
+        if self.head.heading()!=UP:
+            self.head.setheading(DOWN)
+
+
+
+
+
+
+
+
+

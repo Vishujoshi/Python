@@ -5,6 +5,7 @@ program_dictionary={
     "Loop" : "used to repeat a set of instructions"
 }
 
+program_dictionary[1]=4
 # print Dictionary
 print(program_dictionary)
 
